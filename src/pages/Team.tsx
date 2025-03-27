@@ -56,9 +56,9 @@ const Team = () => {
                   at UM6P where I implemented this crop classification project.
                 </p>
                 <div className="space-y-2 text-gray-600">
-                  <p>🎓 @UM6P College of Computing</p>
-                  <p>💼 @SDAS Group</p>
-                  <p>📚 Software Engineering Student @ENSAB</p>
+                  <p>🎓 Software Engineering Student @ENSAB</p>
+                  <p>💼 @UM6P College of Computing | @SDAS Group</p>
+                  <p>📚 Teaching Assistant</p>
                 </div>
               </div>
             </div>
@@ -142,7 +142,7 @@ const Team = () => {
                 <img
                   src="https://cc.um6p.ma/assets/images/logo-cc-v2.png"
                   alt="UM6P Logo"
-                  className="h-24 mb-6"
+                  className="h-22 mb-6"
                 />
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   University Mohammed VI Polytechnic | College of computing
@@ -173,7 +173,7 @@ const Team = () => {
                 <img
                   src="https://www-ensab.uh1.ac.ma/Site/assets/images/logo-ensa-berrechid.png"
                   alt="ENSAB Logo"
-                  className="h-24 mb-6"
+                  className="h-17 mb-6"
                 />
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">ENSA Berrechid</h3>
                 <p className="text-gray-600 mb-4">
@@ -202,7 +202,7 @@ const Team = () => {
                 <img
                   src="https://www.sdas-group.com/static/libs/img/logo_2.png"
                   alt="SDAS Logo"
-                  className="h-24 mb-6"
+                  className="h-28 mb-2"
                 />
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">SDAS Group</h3>
                 <p className="text-gray-600 mb-4">
