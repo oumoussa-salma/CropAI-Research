@@ -1,4 +1,4 @@
-{/* import React, { useState } from 'react';
+/*import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   Upload,
@@ -290,7 +290,10 @@ const TestModel = () => {
   );
 };
 
-export default TestModel;*/}import React from 'react';
+export default TestModel;
+*/
+
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Loader2, Sparkles } from 'lucide-react';
 
@@ -306,7 +309,7 @@ const TestModel = () => {
         >
           <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
             <span className="block">Multimodal Crop Classification</span>
-            <span className="block text-green-600">using 3D CNN with ConvLSTMs</span>
+            <span className="block text-green-600">Harnessing Deep learning Models</span>
           </h1>
         </motion.div>
 

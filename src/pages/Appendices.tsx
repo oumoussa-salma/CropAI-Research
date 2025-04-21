@@ -5,8 +5,6 @@ import {
   Clock,
   FileText,
   Github,
-  Image as ImageIcon,
-  Link as LinkIcon,
   FileCode,
   BookOpen,
   BarChart,
@@ -16,25 +14,25 @@ const tasks = [
   {
     title: 'Literature Review & State of the Art',
     status: 'In Progress',
-    date: 'March 2024',
+    date: 'March 2025',
     description: `Currently conducting a systematic literature review on crop classification using traditional ML, DL (CNN, RNN, ConvLSTM, 3D CNN), and multimodal fusion methods.`,
   },
   {
     title: 'Problem Definition & Objectives',
-    status: 'In Progress',
-    date: 'March 2024',
+    status: 'Completed',
+    date: 'March 2025',
     description: `Currently defining the research problem and setting objectives focused on improving accuracy using multimodal and temporal data.`,
   },
   {
     title: 'Dataset Selection & Preprocessing',
-    status: 'In Progress',
-    date: 'March 2024',
+    status: 'Completed',
+    date: 'April 2025',
     description: `Working on selecting and preprocessing Sentinel-2, SAR, and Hyperspectral datasets using normalization, stacking, and alignment techniques.`,
   },
   {
     title: 'Model Design & Architecture',
-    status: 'To Be Started',
-    date: 'Coming Soon',
+    status: 'Completed',
+    date: 'April 2025',
     description: `Will be designing a hybrid architecture using 3D CNN for spatiotemporal learning and ConvLSTM for sequence modeling, with early/late fusion blocks.`,
   },
   {
@@ -66,6 +64,11 @@ const downloadableReports = [
     title: 'Draft of the Systematic Literature Review',
     url: '/files/slr_draft.pdf',
     description: 'Preliminary draft of the SLR. Currently being revised with a better methodology for journal submission.'
+  },
+  {
+    title: 'PFE Progress',
+    url: '/files/_PFE Progress (21-4-2025).pdf', 
+    description: 'Detailed progress report of the PFE project as of 21st April 2025.'
   }
 ];
 

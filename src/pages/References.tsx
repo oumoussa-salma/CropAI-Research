@@ -1,6 +1,6 @@
-import React from "react";
-
+import React, { useState } from "react";
 import { motion } from 'framer-motion';
+
 
 const references = [
     {
@@ -317,7 +317,8 @@ const references = [
     {
         "id": "barriere2023boosting",
         "title": "Boosting Crop Classification by Hierarchically Fusing Satellite, Rotational, and Contextual Data",
-        "authors": "Barri\\u00e8re, Valentin and Claverie, Martin and Schneider, Maja and Lemoine, Guido and d\'Andrimont, Rapha\\u00ebl",
+        "authors": "Barri u00e8re, Valentin and Claverie, Martin and Schneider, Maja and Lemoine, Guido and d'Andrimont, Raphau00ebl",
+
         "journal": "arXiv preprint arXiv:2305.12011",
         "year": 2023,
         "url": "https://arxiv.org/abs/2305.12011"
@@ -362,10 +363,28 @@ const references = [
 ];
 
 const References = () => {
-  return (
-    <div className="min-h-screen bg-white py-12 px-6 sm:px-12 lg:px-24">
-           {/* Header */}
-           <motion.div
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 6; // Number of items per page
+  
+    // Calculate the start and end index for the current page
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+  
+    // Slice the references to show only the ones for the current page
+    const currentReferences = references.slice(startIndex, endIndex);
+  
+    // Total number of pages
+    const totalPages = Math.ceil(references.length / itemsPerPage);
+  
+    // Handle page change
+    const handlePageChange = (page) => {
+      setCurrentPage(page);
+    };
+  
+    return (
+      <div className="min-h-screen bg-white py-12 px-6 sm:px-12 lg:px-24">
+        {/* Header */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
@@ -373,31 +392,53 @@ const References = () => {
           <h1 className="text-4xl font-bold text-gray-900 mb-4">References and Citations</h1>
           <p className="text-xl text-gray-600">A curated list of the most relevant papers and sources used in our research work.</p>
         </motion.div>
-
-       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {references.map((ref, index) => (
-          <div
-            key={ref.id}
-           className="bg-gray-50 p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
-          >
-          <p className="text-lg font-semibold text-gray-900 mb-2">{ref.title}</p>
-            <p className="text-gray-700 text-sm italic mb-1">{ref.authors}</p>
-            <p className="text-gray-600 text-sm mb-2">
-              {ref.journal} ({ref.year})
-            </p>
-            <a
-              href={ref.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-green-600 hover:underline mt-1 inline-block"
+  
+        {/* References List */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {currentReferences.map((ref, index) => (
+            <div
+              key={ref.id}
+              className="bg-gray-50 p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
             >
-              Access Publication ↗
-            </a>
-          </div>
-        ))}
+              <p className="text-lg font-semibold text-gray-900 mb-2">{ref.title}</p>
+              <p className="text-gray-700 text-sm italic mb-1">{ref.authors}</p>
+              <p className="text-gray-600 text-sm mb-2">
+                {ref.journal} ({ref.year})
+              </p>
+              <a
+                href={ref.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-600 hover:underline mt-1 inline-block"
+              >
+                Access Publication ↗
+              </a>
+            </div>
+          ))}
+        </div>
+  
+        {/* Pagination Controls */}
+        <div className="mt-6 flex justify-center space-x-4">
+          <button
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+            className="px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300 disabled:bg-gray-300"
+          >
+            Previous
+          </button>
+          <span className="flex items-center justify-center">
+            Page {currentPage} of {totalPages}
+          </span>
+          <button
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            className="px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300 disabled:bg-gray-300"
+          >
+            Next
+          </button>
+        </div>
       </div>
-    </div>
-  );
-};
-
-export default References;
+    );
+  };
+  
+  export default References;

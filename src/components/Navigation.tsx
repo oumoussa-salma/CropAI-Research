@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Users, FileText } from 'lucide-react';
-
+import { Users, FileText, Home as HomeIcon, Info as InfoIcon, PlayCircle } from 'lucide-react';
 
 const Navigation = () => {
   return (
     <nav className="bg-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
+          {/* Left Section - Logo and Title */}
           <div className="flex">
             <NavLink to="/" className="flex items-center">
               <svg
@@ -21,62 +21,80 @@ const Navigation = () => {
               </svg>
               <span className="ml-2 text-xl font-semibold text-gray-900">CropAI Research</span>
             </NavLink>
-
-
           </div>
+
+          {/* Right Section - Navigation Links */}
           <div className="flex space-x-8">
+            {/* Home */}
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `inline-flex items-center px-1 pt-1 text-sm font-medium ${isActive ? 'text-green-600 border-b-2 border-green-600' : 'text-gray-500 hover:text-gray-700'
-                }`
+                `inline-flex items-center px-1 pt-1 text-sm font-medium ${isActive ? 'text-green-600 border-b-2 border-green-600' : 'text-gray-500 hover:text-gray-700'}`
               }
             >
+              <HomeIcon className="h-5 w-5 mr-1" />
               Home
             </NavLink>
+
+            {/* About */}
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                `inline-flex items-center px-1 pt-1 text-sm font-medium ${isActive ? 'text-green-600 border-b-2 border-green-600' : 'text-gray-500 hover:text-gray-700'
-                }`
+                `inline-flex items-center px-1 pt-1 text-sm font-medium ${isActive ? 'text-green-600 border-b-2 border-green-600' : 'text-gray-500 hover:text-gray-700'}`
               }
             >
+              <InfoIcon className="h-5 w-5 mr-1" />
               About
             </NavLink>
+
+            {/* Train Model */}
+            <NavLink
+              to="/train-model"
+              className={({ isActive }) =>
+                `inline-flex items-center px-1 pt-1 text-sm font-medium ${isActive ? 'text-green-600 border-b-2 border-green-600' : 'text-gray-500 hover:text-gray-700'}`
+              }
+            >
+              <PlayCircle className="h-5 w-5 mr-1" />
+              Train Model
+            </NavLink>
+
+            {/* Test Model */}
             <NavLink
               to="/test-model"
               className={({ isActive }) =>
-                `inline-flex items-center px-1 pt-1 text-sm font-medium ${isActive ? 'text-green-600 border-b-2 border-green-600' : 'text-gray-500 hover:text-gray-700'
-                }`
+                `inline-flex items-center px-1 pt-1 text-sm font-medium ${isActive ? 'text-green-600 border-b-2 border-green-600' : 'text-gray-500 hover:text-gray-700'}`
               }
             >
               Test Model
             </NavLink>
+
+            {/* Team */}
             <NavLink
               to="/team"
               className={({ isActive }) =>
-                `inline-flex items-center px-1 pt-1 text-sm font-medium ${isActive ? 'text-green-600 border-b-2 border-green-600' : 'text-gray-500 hover:text-gray-700'
-                }`
+                `inline-flex items-center px-1 pt-1 text-sm font-medium ${isActive ? 'text-green-600 border-b-2 border-green-600' : 'text-gray-500 hover:text-gray-700'}`
               }
             >
-              <Users className="h-4 w-4 mr-1" />
+              <Users className="h-5 w-5 mr-1" />
               Team
             </NavLink>
+
+            {/* Appendices */}
             <NavLink
               to="/appendices"
               className={({ isActive }) =>
-                `inline-flex items-center px-1 pt-1 text-sm font-medium ${isActive ? 'text-green-600 border-b-2 border-green-600' : 'text-gray-500 hover:text-gray-700'
-                }`
+                `inline-flex items-center px-1 pt-1 text-sm font-medium ${isActive ? 'text-green-600 border-b-2 border-green-600' : 'text-gray-500 hover:text-gray-700'}`
               }
             >
-              <FileText className="h-4 w-4 mr-1" />
+              <FileText className="h-5 w-5 mr-1" />
               Appendices
             </NavLink>
+
+            {/* References */}
             <NavLink
-              to="/References"
+              to="/references"
               className={({ isActive }) =>
-                `inline-flex items-center px-1 pt-1 text-sm font-medium ${isActive ? 'text-green-600 border-b-2 border-green-600' : 'text-gray-500 hover:text-gray-700'
-                }`
+                `inline-flex items-center px-1 pt-1 text-sm font-medium ${isActive ? 'text-green-600 border-b-2 border-green-600' : 'text-gray-500 hover:text-gray-700'}`
               }
             >
               References
@@ -86,6 +104,6 @@ const Navigation = () => {
       </div>
     </nav>
   );
-}
+};
 
 export default Navigation;

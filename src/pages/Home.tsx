@@ -18,10 +18,10 @@ const Home = () => {
         >
           <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
             <span className="block">Multimodal Crop Classification</span>
-            <span className="block text-green-600">using 3D CNN with ConvLSTMs</span>
+            <span className="block text-green-600">Harnessing Deep learning Models</span>
           </h1>
           <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-            Harnessing Multimodal Remote Sensing & Deep Learning for Smarter Agriculture
+            Leveraging Remote Sensing Data and Deep Learning to Transform Agricultural Predictions
           </p>
           <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
             <div className="rounded-md shadow">
@@ -46,12 +46,12 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-center"
             >
-              <div className="flex justify-center">
-                <Satellite className="h-12 w-12 text-green-600" />
+              <div className="flex justify-center mb-4">
+                <Satellite className="h-16 w-16 text-green-600" />
               </div>
-              <h3 className="mt-4 text-xl font-medium text-gray-900">Multimodal Data</h3>
+              <h3 className="mt-4 text-xl font-medium text-gray-900">Multimodal Data Integration</h3>
               <p className="mt-2 text-base text-gray-500">
-                Integrating multiple satellite data sources for comprehensive analysis
+                Combining diverse satellite data sources for a holistic and comprehensive analysis, allowing accurate crop classification through integration of temporal and spatial features.
               </p>
             </motion.div>
 
@@ -61,12 +61,12 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-center"
             >
-              <div className="flex justify-center">
-                <Brain className="h-12 w-12 text-green-600" />
+              <div className="flex justify-center mb-4">
+                <Brain className="h-16 w-16 text-green-600" />
               </div>
-              <h3 className="mt-4 text-xl font-medium text-gray-900">Deep Learning</h3>
+              <h3 className="mt-4 text-xl font-medium text-gray-900">Advanced Deep Learning</h3>
               <p className="mt-2 text-base text-gray-500">
-                Advanced 3D CNN with ConvLSTM architecture for accurate classification
+                Employing cutting-edge algorithms to effectively capture temporal dependencies and spatial features in satellite imagery for accurate crop classification at an early stage.
               </p>
             </motion.div>
 
@@ -76,12 +76,12 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-center"
             >
-              <div className="flex justify-center">
-                <Plant className="h-12 w-12 text-green-600" />
+              <div className="flex justify-center mb-4">
+                <Plant className="h-16 w-16 text-green-600" />
               </div>
               <h3 className="mt-4 text-xl font-medium text-gray-900">Precision Agriculture</h3>
               <p className="mt-2 text-base text-gray-500">
-                Enabling smart farming through accurate crop classification
+                Enabling smarter agricultural practices by delivering early crop-type predictions, helping farmers optimize resource usage, monitor crop health, and improve overall yield.
               </p>
             </motion.div>
           </div>

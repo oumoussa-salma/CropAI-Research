@@ -11,7 +11,6 @@ import {
   Droplet,
   Shield,
   ArrowRight,
-  Building2,
   Users,
   Rocket
 } from 'lucide-react';
@@ -22,12 +21,7 @@ const fadeIn = {
   transition: { duration: 0.6 }
 };
 
-type SectionProps = {
-  title: string;
-  children: React.ReactNode;
-  icon: React.ElementType;
-  delay?: number;
-};
+
 
 const Section = ({ title, children, icon: Icon, delay = 0 }) => (
   <motion.div
@@ -44,11 +38,7 @@ const Section = ({ title, children, icon: Icon, delay = 0 }) => (
   </motion.div>
 );
 
-type FeatureProps = {
-  title: string;
-  description: string;
-  icon: React.ElementType;
-};
+
 const Feature = ({ icon: Icon, title, description }) => (
   <div className="flex items-start p-4">
     <div className="flex-shrink-0">

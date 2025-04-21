@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
@@ -7,6 +6,7 @@ import TestModel from './pages/TestModel';
 import Team from './pages/Team';
 import Appendices from './pages/Appendices';
 import References from'./pages/References';
+import TrainModelForm from './pages/TrainModel';
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/test-model" element={<TestModel />} />
+          <Route path="/train-model" element={<TrainModelForm />} />
           <Route path="/team" element={<Team />} />
           <Route path="/appendices" element={<Appendices />} />
           <Route path="/References" element={<References />} />
