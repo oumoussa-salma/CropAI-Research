@@ -1,0 +1,103 @@
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Map, ChevronRight } from 'lucide-react';
+
+const cropMaps = [
+  { id: 'clover', name: 'Clover', file: '2map_clover.html' },
+  { id: 'corn', name: 'Corn', file: '2map_corn.html' },
+  { id: 'meadow', name: 'Meadow', file: '2map_meadow.html' },
+  { id: 'wheat', name: 'Wheat', file: '2map_wheat.html' },
+  { id: 'barley', name: 'Barley', file: '2map_barley.html' },
+  { id: 'rye', name: 'Rye', file: '2map_rye.html' },
+  { id: 'oats', name: 'Oats', file: '2map_oats.html' },
+];
+
+const TestResults: React.FC = () => {
+  const [activeCrop, setActiveCrop] = useState(cropMaps[0].id);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-white to-green-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-12"
+        >
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Test Results by Crop</h1>
+          <p className="text-xl text-gray-600">Interactive visualization of crop classification results</p>
+        </motion.div>
+
+        {/* Main Content */}
+        <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+          {/* Tabs Navigation */}
+          <div className="flex overflow-x-auto border-b border-gray-200 scrollbar-hide">
+            {cropMaps.map((crop) => (
+              <button
+                key={crop.id}
+                onClick={() => setActiveCrop(crop.id)}
+                className={`flex items-center px-6 py-4 text-sm font-medium whitespace-nowrap transition-colors duration-200 ${
+                  activeCrop === crop.id
+                    ? 'text-green-600 border-b-2 border-green-600 bg-green-50'
+                    : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
+                }`}
+              >
+                <Map className={`h-4 w-4 mr-2 ${
+                  activeCrop === crop.id ? 'text-green-600' : 'text-gray-400'
+                }`} />
+                {crop.name}
+                {activeCrop === crop.id && (
+                  <ChevronRight className="h-4 w-4 ml-2 text-green-600" />
+                )}
+              </button>
+            ))}
+          </div>
+
+          {/* Map Display */}
+          <div className="relative w-full" style={{ height: 'calc(100vh - 300px)' }}>
+            {cropMaps.map((crop) => (
+              <motion.div
+                key={crop.id}
+                initial={{ opacity: 0 }}
+                animate={{ 
+                  opacity: activeCrop === crop.id ? 1 : 0,
+                  display: activeCrop === crop.id ? 'block' : 'none'
+                }}
+                transition={{ duration: 0.2 }}
+                className="absolute inset-0"
+              >
+                <iframe
+                  src={crop.file}
+                  title={`${crop.name} Test Results`}
+                  className="w-full h-full border-0"
+                  loading="lazy"
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Legend or Additional Info */}
+        <div className="mt-8 bg-white rounded-lg shadow-sm p-6">
+          <h2 className="text-lg font-semibold text-gray-900 mb-4">Map Information</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-4 h-4 bg-green-500 rounded-full"></div>
+              <span className="text-sm text-gray-600">Correct Classifications</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-4 h-4 bg-red-500 rounded-full"></div>
+              <span className="text-sm text-gray-600">Misclassifications</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-4 h-4 bg-gray-300 rounded-full"></div>
+              <span className="text-sm text-gray-600">No Data Available</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TestResults;

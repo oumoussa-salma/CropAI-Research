@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Users, FileText, Home as HomeIcon, Info as InfoIcon, PlayCircle } from 'lucide-react';
+import { Users, FileText, Home as HomeIcon, Info as InfoIcon, PlayCircle, Map } from 'lucide-react';
 
 const Navigation = () => {
   return (
@@ -66,6 +66,17 @@ const Navigation = () => {
               }
             >
               Test Model
+            </NavLink>
+
+            {/* Test Results */}
+            <NavLink
+              to="/test-results"
+              className={({ isActive }) =>
+                `inline-flex items-center px-1 pt-1 text-sm font-medium ${isActive ? 'text-green-600 border-b-2 border-green-600' : 'text-gray-500 hover:text-gray-700'}`
+              }
+            >
+              <Map className="h-5 w-5 mr-1" />
+              Test Results
             </NavLink>
 
             {/* Team */}

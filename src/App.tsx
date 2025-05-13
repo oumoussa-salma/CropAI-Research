@@ -7,6 +7,7 @@ import Team from './pages/Team';
 import Appendices from './pages/Appendices';
 import References from'./pages/References';
 import TrainModelForm from './pages/TrainModel';
+import TestResults from './pages/TestResults';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
           <Route path="/train-model" element={<TrainModelForm />} />
           <Route path="/team" element={<Team />} />
           <Route path="/appendices" element={<Appendices />} />
-          <Route path="/References" element={<References />} />
+          <Route path="/references" element={<References />} />
+          <Route path="/test-results" element={<TestResults />} />
         </Routes>
       </div>
     </Router>
