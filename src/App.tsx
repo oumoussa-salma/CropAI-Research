@@ -20,7 +20,7 @@ function App() {
           <Route path="/train-model" element={<TrainModelForm />} />
           <Route path="/team" element={<Team />} />
           <Route path="/appendices" element={<Appendices />} />
-          <Route path="/References" element={<References />} />
+          <Route path="/references" element={<References />} />
         </Routes>
       </div>
     </Router>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Users, FileText, Home as HomeIcon, Info as InfoIcon, PlayCircle } from 'lucide-react';
+import { Users, FileText, Home as HomeIcon, Info as InfoIcon, PlayCircle, Map } from 'lucide-react';
 
 const Navigation = () => {
   return (
@@ -67,6 +67,7 @@ const Navigation = () => {
             >
               Test Model
             </NavLink>
+
 
             {/* Team */}
             <NavLink
