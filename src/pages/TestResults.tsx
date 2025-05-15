@@ -6,9 +6,10 @@ const cropMaps = [
   { id: 'clover', name: 'Clover', file: '2map_clover.html' },
   { id: 'corn', name: 'Corn', file: '2map_corn.html' },
   { id: 'meadow', name: 'Meadow', file: '2map_meadow.html' },
-  { id: 'spring_barley', name: 'Spring Barley', file: '2map_spring_barley.html' },
-  { id: 'triticale', name: 'Triticale', file: '2map_triticale.html' },
-  { id: 'wheat', name: 'Wheat', file: '2map_wheat.html' }
+  { id: 'wheat', name: 'Wheat', file: '2map_wheat.html' },
+  { id: 'barley', name: 'Barley', file: '2map_barley.html' },
+  { id: 'rye', name: 'Rye', file: '2map_rye.html' },
+  { id: 'oats', name: 'Oats', file: '2map_oats.html' },
 ];
 
 const TestResults: React.FC = () => {
@@ -100,4 +101,3 @@ const TestResults: React.FC = () => {
 };
 
 export default TestResults;
-
