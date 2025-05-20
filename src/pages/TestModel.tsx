@@ -52,14 +52,14 @@ import { motion } from 'framer-motion';
 import { Map, ChevronRight } from 'lucide-react';
 
 const cropMaps = [
-  { id: 'clover', name: 'Clover', file: 'files/2map_clover.html' },
-  { id: 'corn', name: 'Corn', file: 'files/2map_corn.html' },
-  { id: 'meadow', name: 'Meadow', file: 'files/2map_meadow.html' },
-  { id: 'spring_barley', name: 'Spring Barley', file: 'files/2map_spring_barley.html' },
-  { id: 'winter_barley', name: 'Winter Barley', file: 'files/2map_winter_barley.html' },
-  { id: 'triticale', name: 'Triticale', file: 'files/2map_triticale.html' },
-  { id: 'wheat', name: 'Wheat', file: 'files/2map_wheat.html' },
-  {id:'all', name: 'All crops', file: 'files/2map_all.html'},
+  { id: 'clover', name: 'Clover', file: 'files/bavarian/2map_clover.html' },
+  { id: 'corn', name: 'Corn', file: 'files/bavarian/2map_corn.html' },
+  { id: 'meadow', name: 'Meadow', file: 'files/bavarian/2map_meadow.html' },
+  { id: 'spring_barley', name: 'Spring Barley', file: 'files/bavarian/2map_spring_barley.html' },
+  { id: 'winter_barley', name: 'Winter Barley', file: 'files/bavarian/2map_winter_barley.html' },
+  { id: 'triticale', name: 'Triticale', file: 'files/bavarian/2map_triticale.html' },
+  { id: 'wheat', name: 'Wheat', file: 'files/bavarian/2map_wheat.html' },
+  {id:'all', name: 'All crops', file: 'files/bavarian/2map_all.html'},
 ];
 
 const TestModel: React.FC = () => {
