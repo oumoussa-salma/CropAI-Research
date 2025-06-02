@@ -51,8 +51,13 @@ const tasks = [
 
 const downloadableReports = [
   {
+    title: ' PFE Report V02 – Salma Oumoussa',
+    url: '/files/PFE_Report_SalmaOumoussa_vf02.pdf',
+    description: 'Final version of the end-of-studies engineering thesis submitted by Salma Oumoussa.'
+  },
+  {
     title: 'Internship Outline',
-    url: '/files/internship_outline.pdf', 
+    url: '/files/internship_outline.pdf',
     description: 'Overview of objectives, timeline, and scope of the end-of-studies internship.'
   },
   {
@@ -67,19 +72,20 @@ const downloadableReports = [
   },
   {
     title: 'PFE Progress',
-    url: '/files/_PFE Progress (21-4-2025).pdf', 
+    url: '/files/_PFE Progress (21-4-2025).pdf',
     description: 'Detailed progress report of the PFE project as of 21st April 2025.'
-  }
+  },
 ];
 
 
+
 const appendices = [
-  {
-    title: 'Research Paper',
-    icon: BookOpen,
-    status: 'Coming Soon',
-    description: 'Detailed methodology and findings',
-  },
+ {
+  title: 'Research Paper',
+  icon: BookOpen,
+  status: 'In Progress',
+  description: 'Currently drafting — not ready for submission yet.',
+},
   {
     title: 'GitHub Repository',
     icon: Github,
@@ -93,11 +99,12 @@ const appendices = [
     description: 'API documentation and setup guide',
   },
   {
-    title: 'Results & Visualizations',
-    icon: BarChart,
-    status: 'In Progress',
-    description: 'Detailed performance metrics and visualizations',
-  },
+  title: 'Results & Visualizations',
+  icon: BarChart,
+  status: 'Completed',
+  description: 'Proof of concept completed — check the TestModel page for results and gallery.',
+}
+
 ];
 
 const Appendices = () => {
@@ -176,32 +183,32 @@ const Appendices = () => {
 
             {/* Appendices Card */}
             <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="bg-white rounded-lg shadow-sm p-6"
-          >
-            <h2 className="text-2xl font-semibold mb-6">Appendices</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {appendices.map((item, index) => {
-                const Icon = item.icon;
-                return (
-                  <div
-                    key={index}
-                    className="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors duration-200"
-                  >
-                    <div className="flex items-center space-x-3 mb-2">
-                      <Icon className="h-5 w-5 text-green-600" />
-                      <h3 className="font-medium text-gray-900">{item.title}</h3>
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="bg-white rounded-lg shadow-sm p-6"
+            >
+              <h2 className="text-2xl font-semibold mb-6">Appendices</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {appendices.map((item, index) => {
+                  const Icon = item.icon;
+                  return (
+                    <div
+                      key={index}
+                      className="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors duration-200"
+                    >
+                      <div className="flex items-center space-x-3 mb-2">
+                        <Icon className="h-5 w-5 text-green-600" />
+                        <h3 className="font-medium text-gray-900">{item.title}</h3>
+                      </div>
+                      <p className="text-sm text-gray-600">{item.description}</p>
+                      <span className="inline-block mt-2 text-xs font-medium text-gray-500">
+                        {item.status}
+                      </span>
                     </div>
-                    <p className="text-sm text-gray-600">{item.description}</p>
-                    <span className="inline-block mt-2 text-xs font-medium text-gray-500">
-                      {item.status}
-                    </span>
-                  </div>
-                );
-              })}
-            </div>
-          </motion.div>
+                  );
+                })}
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>

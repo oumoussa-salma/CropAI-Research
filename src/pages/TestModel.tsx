@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Map, ChevronRight, Globe } from 'lucide-react';
-import BavarianGallery from '../components/BavarianGallery';
+import Gallery from '../components/Gallery';
+import { bavarianGallery } from '../components/bavarianGalleryData';
+import { breizhGallery } from '../components/BreizhGalleryData';
+
 
 const datasetMap = {
   bavarian: [
@@ -60,8 +63,8 @@ const TestModel: React.FC = () => {
               key={dataset}
               onClick={() => handleDatasetSwitch(dataset)}
               className={`flex items-center px-4 py-2 rounded-full text-sm font-medium shadow-sm transition-all ${activeDataset === dataset
-                  ? 'bg-green-600 text-white'
-                  : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-100'
+                ? 'bg-green-600 text-white'
+                : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-100'
                 }`}
             >
               <Globe className="w-4 h-4 mr-2" />
@@ -78,8 +81,8 @@ const TestModel: React.FC = () => {
                 key={crop.id}
                 onClick={() => setActiveCrop(crop.id)}
                 className={`flex items-center px-6 py-4 text-sm font-medium whitespace-nowrap transition-colors duration-200 ${activeCrop === crop.id
-                    ? 'text-green-600 border-b-2 border-green-600 bg-green-50'
-                    : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
+                  ? 'text-green-600 border-b-2 border-green-600 bg-green-50'
+                  : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
                   }`}
               >
                 <Map
@@ -117,9 +120,8 @@ const TestModel: React.FC = () => {
             ))}
           </div>
         </div>
-
-        {/* Bavarian Results Gallery (Only if Bavarian is active) */}
-        {activeDataset === 'bavarian' && <BavarianGallery />}
+        {activeDataset === 'bavarian' && <Gallery data={bavarianGallery} />}
+        {activeDataset === 'breizh' && <Gallery data={breizhGallery} />}
 
         {/* Legend */}
         <div className="mt-8 bg-white rounded-lg shadow-sm p-6">
@@ -130,7 +132,7 @@ const TestModel: React.FC = () => {
               <span className="text-sm text-gray-600">
                 Correct Classifications
                 {activeDataset === 'bavarian' && ' (75.4%)'}
-                {activeDataset === 'breizh' && ' (TBD)'}
+                {activeDataset === 'breizh' && ' (68.5%)'}
               </span>
             </div>
             <div className="flex items-center space-x-2">
@@ -138,7 +140,7 @@ const TestModel: React.FC = () => {
               <span className="text-sm text-gray-600">
                 Misclassifications
                 {activeDataset === 'bavarian' && ' (10.6%)'}
-                {activeDataset === 'breizh' && ' (TBD)'}
+                {activeDataset === 'breizh' && ' (20.0%)'}
               </span>
             </div>
             <div className="flex items-center space-x-2">
@@ -146,7 +148,7 @@ const TestModel: React.FC = () => {
               <span className="text-sm text-gray-600">
                 No Data Available
                 {activeDataset === 'bavarian' && ' (14.0%)'}
-                {activeDataset === 'breizh' && ' (TBD)'}
+                {activeDataset === 'breizh' && ' (11.5%)'}
               </span>
             </div>
           </div>
