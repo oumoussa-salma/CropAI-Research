@@ -29,18 +29,11 @@ const navItems = [
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Left - Logo */}
-          <NavLink to="/" className="flex items-center">
-            <svg
-              fill="#16a34a"
-              viewBox="0 0 32 32"
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8"
-            >
-              <title>microscope</title>
-              <path d="M28.5 29.25h-4.313c0.914-0.518 [...]" />
-            </svg>
-            <span className="ml-2 text-xl font-semibold text-gray-900">CropAI Research</span>
-          </NavLink>
+          <NavLink to="/" className="flex items-center space-x-2">
+  <img src="/icons/crop-icon.svg" alt="CropAI Logo" className="h-7 w-7" />
+  <span className="text-xl font-semibold text-gray-900">CropAI Research</span>
+</NavLink>
+
 
           {/* Right - Desktop Nav */}
           <div className="hidden md:flex space-x-6">
