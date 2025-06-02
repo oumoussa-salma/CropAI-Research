@@ -1,0 +1,109 @@
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { Users, FileText, Home as HomeIcon, Info as InfoIcon, PlayCircle, Map } from 'lucide-react';
+
+const Navigation = () => {
+  return (
+    <nav className="bg-white shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
+          {/* Left Section - Logo and Title */}
+          <div className="flex">
+            <NavLink to="/" className="flex items-center">
+              <svg
+                fill="#16a34a"
+                viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8"
+              >
+                <title>microscope</title>
+                <path d="M28.5 29.25h-4.313c0.914-0.518 1.696-1.142 2.367-1.87l0.006-0.007c1.672-1.925 2.69-4.455 2.69-7.224 0-0.052-0-0.105-0.001-0.157l0 0.008c0.004-0.101 0.006-0.22 0.006-0.339 [...]"/>
+              </svg>
+              <span className="ml-2 text-xl font-semibold text-gray-900">CropAI Research</span>
+            </NavLink>
+          </div>
+
+          {/* Right Section - Navigation Links */}
+          <div className="flex space-x-8">
+            {/* Home */}
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `inline-flex items-center px-1 pt-1 text-sm font-medium ${isActive ? 'text-green-600 border-b-2 border-green-600' : 'text-gray-500 hover:text-gray-700'}`
+              }
+            >
+              <HomeIcon className="h-5 w-5 mr-1" />
+              Home
+            </NavLink>
+
+            {/* About */}
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                `inline-flex items-center px-1 pt-1 text-sm font-medium ${isActive ? 'text-green-600 border-b-2 border-green-600' : 'text-gray-500 hover:text-gray-700'}`
+              }
+            >
+              <InfoIcon className="h-5 w-5 mr-1" />
+              About
+            </NavLink>
+
+            {/* Train Model */}
+            <NavLink
+              to="/train-model"
+              className={({ isActive }) =>
+                `inline-flex items-center px-1 pt-1 text-sm font-medium ${isActive ? 'text-green-600 border-b-2 border-green-600' : 'text-gray-500 hover:text-gray-700'}`
+              }
+            >
+              <PlayCircle className="h-5 w-5 mr-1" />
+              Train Model
+            </NavLink>
+
+            {/* Test Model */}
+            <NavLink
+              to="/test-model"
+              className={({ isActive }) =>
+                `inline-flex items-center px-1 pt-1 text-sm font-medium ${isActive ? 'text-green-600 border-b-2 border-green-600' : 'text-gray-500 hover:text-gray-700'}`
+              }
+            >
+              Test Model
+            </NavLink>
+
+            {/* Team */}
+            <NavLink
+              to="/team"
+              className={({ isActive }) =>
+                `inline-flex items-center px-1 pt-1 text-sm font-medium ${isActive ? 'text-green-600 border-b-2 border-green-600' : 'text-gray-500 hover:text-gray-700'}`
+              }
+            >
+              <Users className="h-5 w-5 mr-1" />
+              Team
+            </NavLink>
+
+            {/* Appendices */}
+            <NavLink
+              to="/appendices"
+              className={({ isActive }) =>
+                `inline-flex items-center px-1 pt-1 text-sm font-medium ${isActive ? 'text-green-600 border-b-2 border-green-600' : 'text-gray-500 hover:text-gray-700'}`
+              }
+            >
+              <FileText className="h-5 w-5 mr-1" />
+              Appendices
+            </NavLink>
+
+            {/* References */}
+            <NavLink
+              to="/references"
+              className={({ isActive }) =>
+                `inline-flex items-center px-1 pt-1 text-sm font-medium ${isActive ? 'text-green-600 border-b-2 border-green-600' : 'text-gray-500 hover:text-gray-700'}`
+              }
+            >
+              References
+            </NavLink>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navigation;
