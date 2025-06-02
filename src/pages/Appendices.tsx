@@ -12,11 +12,12 @@ import {
 
 const tasks = [
   {
-    title: 'Literature Review & State of the Art',
-    status: 'In Progress',
-    date: 'March 2025',
-    description: `Currently conducting a systematic literature review on crop classification using traditional ML, DL (CNN, RNN, ConvLSTM, 3D CNN), and multimodal fusion methods.`,
-  },
+  title: 'Literature Review & State of the Art',
+  status: 'Completed',
+  date: 'March–June 2025',
+  description: `The literature review on crop classification is completed, covering traditional ML, DL (CNN, RNN, ConvLSTM, 3D CNN), and multimodal fusion methods. Key insights are synthesized to support the proposed approach and experimental choices.`,
+}
+,
   {
     title: 'Problem Definition & Objectives',
     status: 'Completed',
@@ -35,18 +36,20 @@ const tasks = [
     date: 'April 2025',
     description: `Will be designing a hybrid architecture using 3D CNN for spatiotemporal learning and ConvLSTM for sequence modeling, with early/late fusion blocks.`,
   },
+ {
+  title: 'Evaluation & Experimentation Plan',
+  status: 'Completed',
+  date: 'Finalized June 2025',
+  description: `Evaluation metrics (Accuracy, F1-Score, Confusion Matrix) have been defined, and benchmark experiments have been conducted. Check the Test Model page for detailed results and visualizations.`,
+}
+,
   {
-    title: 'Evaluation & Experimentation Plan',
-    status: 'To Be Started',
-    date: 'Coming Soon',
-    description: `Will be defining evaluation metrics (Accuracy, F1-Score, Confusion Matrix) and planning benchmark experiments for model performance.`,
-  },
-  {
-    title: 'Scientific Writing & Reporting',
-    status: 'To Be Started',
-    date: 'Coming Soon',
-    description: `Will begin drafting the research report structure and writing key sections such as Introduction, Methodology, and Results with proper citations.`,
-  },
+  title: 'Scientific Writing & Reporting',
+  status: 'Completed',
+  date: 'Submitted June 2025',
+  description: `The final PFE report has been completed and is available for download. It includes the full research structure, covering the Introduction, Methodology, Results, and proper citations.`,
+}
+
 ];
 
 const downloadableReports = [
