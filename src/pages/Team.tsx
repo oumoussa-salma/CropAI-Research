@@ -97,7 +97,7 @@ const Team = () => {
               }}
             >
               <img
-                src="public\files\imgs\diego.png"
+                src="/files/imgs/diego.png" 
                 alt="Diego Peluffo"
                 className="w-24 h-24 rounded-full mx-auto mb-4"
               />
@@ -132,7 +132,7 @@ const Team = () => {
               }}
             >
               <img
-                src="public\files\imgs\khalidbouihat.png"
+                src="/files/imgs/khalidbouihat.png"
                 alt="Khalid Bouihat"
                 className="w-24 h-24 rounded-full mx-auto mb-4"
               />
