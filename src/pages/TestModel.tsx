@@ -197,7 +197,7 @@ const TestModel: React.FC = () => {
           {/* Enhanced Tabs */}
           <div className="border-b border-gray-100 bg-gray-50">
             <div className="flex overflow-x-auto scrollbar-hide px-6">
-              {crops.map((crop, index) => (
+              {crops.map((crop) => (
                 <motion.button
                   key={crop.id}
                   onClick={() => handleCropChange(crop.id)}

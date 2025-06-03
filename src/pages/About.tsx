@@ -1,5 +1,5 @@
-import React, { useRef, useState } from 'react';
-import { motion, useScroll, useTransform, useInView } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import {
   Sprout,
   Target,
@@ -10,9 +10,7 @@ import {
   Droplet,
   Shield,
   ArrowRight,
-  Users,
   Rocket,
-  TrendingUp,
   Globe,
   Zap,
   CheckCircle,
@@ -21,8 +19,6 @@ import {
 } from 'lucide-react';
 
 const About = () => {
-  const containerRef = useRef(null);
-  const isInView = useInView(containerRef, { once: true, margin: '-100px' });
 
   const challenges = [
     { title: 'Low Accuracy', desc: 'Traditional models lack early-season precision', icon: Target },
@@ -38,7 +34,7 @@ const About = () => {
     { title: 'BreizhCrops Testing', desc: 'Cross-region validation', icon: CheckCircle }
   ];
 
-  const [activeFeature, setActiveFeature] = useState(0);
+
 
   const features = [
     {

@@ -96,7 +96,7 @@ const TrainModelForm: React.FC = () => {
       }
   
     } catch (err) {
-      console.error('Could not fetch logs');
+      console.error('Could not fetch logs', err);
     }
   };
   
