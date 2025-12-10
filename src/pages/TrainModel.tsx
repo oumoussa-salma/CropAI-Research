@@ -98,12 +98,17 @@ const TrainModel: React.FC = () => {
             </div>
             About Model Training
           </h3>
-          <p className="text-gray-700 leading-relaxed">
-            The CropID platform leverages advanced deep learning architectures including <span className="font-semibold text-green-600">3D CNNs</span> and 
-            <span className="font-semibold text-orange-600"> ConvLSTMs</span> to process multi-temporal satellite imagery. 
-            This training interface allows researchers to configure model parameters, select appropriate datasets, 
-            and monitor training metrics such as accuracy, loss, and convergence patterns in real-time.
-          </p>
+         <p className="text-gray-700 leading-relaxed">
+  The CropID platform is designed to leverage advanced deep learning architectures such as 
+  <span className="font-semibold text-green-600">3D CNNs</span> and 
+  <span className="font-semibold text-orange-600">ConvLSTMs</span> for processing multi-temporal satellite imagery 
+  in its final production version. 
+  <br /><br />
+  However, this proof-of-concept implementation focuses on a streamlined experimental setup using a 
+  <span className="font-semibold text-green-600">BiLSTM</span> model, allowing researchers to explore the workflow, 
+  configure training parameters, select datasets, and visualize metrics such as accuracy, loss, and convergence patterns.
+</p>
+
         </motion.div>
       </div>
     </div>

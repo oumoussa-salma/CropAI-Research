@@ -11,7 +11,7 @@ const Team = () => {
         <div className="absolute inset-0 bg-black opacity-5" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-white opacity-5 rounded-full -translate-y-48 translate-x-48" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-white opacity-5 rounded-full translate-y-48 -translate-x-48" />
-        
+
         <div className="relative max-w-7xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -32,7 +32,7 @@ const Team = () => {
         </div>
       </div>
 
-      {/* Researcher Card */}
+      {/* Lead Researcher */}
       <div className="max-w-7xl mx-auto px-4 py-16 -mt-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -50,7 +50,7 @@ const Team = () => {
                 <span className="text-gray-800 font-semibold">Lead Researcher</span>
               </div>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
               {/* Image + Info */}
@@ -93,7 +93,7 @@ const Team = () => {
               {/* Description */}
               <div className="prose max-w-none text-gray-700">
                 <p className="text-lg mb-6 leading-relaxed">
-                  I'm a Pre-doctoral student at UM6P College of Computing, working on the CropID research project, 
+                  I'm a Pre-doctoral student at UM6P College of Computing, working on the CropID research project,
                   where I designed and implemented the intelligent crop classification system powered by deep learning.
                 </p>
 
@@ -118,8 +118,7 @@ const Team = () => {
             </div>
           </div>
         </motion.div>
-
-        {/* Principal Investigator */}
+{/* Principal Investigator */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -133,7 +132,7 @@ const Team = () => {
             </div>
             <h2 className="text-3xl font-bold text-gray-900">Project Leadership</h2>
           </div>
-          
+
           <div className="max-w-2xl mx-auto">
             {[
               {
@@ -145,8 +144,8 @@ const Team = () => {
                 site: "https://www.diegopeluffo.com/"
               }
             ].map((person, idx) => (
-              <motion.div 
-                key={idx} 
+              <motion.div
+                key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
@@ -192,6 +191,47 @@ const Team = () => {
           </div>
         </motion.div>
 
+        {/* Additional Team Members */}
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.25 }}
+  className="mb-16"
+>
+  <div className="text-center mb-10">
+    <div className="inline-flex items-center bg-gradient-to-r from-green-100 to-orange-100 rounded-full px-5 py-2 mb-4">
+      <Users className="w-5 h-5 text-green-600 mr-2" />
+      <span className="text-gray-800 font-semibold">Contributors</span>
+    </div>
+    <h2 className="text-3xl font-bold text-gray-900">Team Members</h2>
+  </div>
+
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+    {[
+      { name: "Hicham Moad Safhi", role: "AI Engineer" },
+      { name: "Khalid Mezraoui", role: "Digital Solution Manager" },
+      { name: "Mohammed Doukali", role: "Software Developer" }
+    ].map((person, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3 + index * 0.1 }}
+        className="bg-white rounded-xl shadow-lg p-6 text-center border-t-4 border-green-600 hover:shadow-xl transition-all duration-300"
+      >
+        <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-r from-green-600 to-orange-500 flex items-center justify-center text-white text-2xl font-bold shadow-md">
+          {person.name.charAt(0)}
+        </div>
+
+        <h3 className="text-xl font-bold text-gray-900">{person.name}</h3>
+        <p className="text-gray-600 mt-1">{person.role}</p>
+      </motion.div>
+    ))}
+  </div>
+</motion.div>
+
+
+        
         {/* Partner Institutions */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -221,9 +261,9 @@ const Team = () => {
               },
               {
                 name: "OCP Nutricrops",
-                logo: "https://www.ocpgroup.ma/sites/default/files/2022-01/logo.svg",
-                desc: "Customized and sustainable fertilizer solutions improving agricultural yields.",
-                link: "https://www.ocpgroup.ma/",
+                logo: "/icons/nutricrops.jpg",
+                desc: "OCP Nutricrops develops tailored crop nutrition programs powered by precision agriculture and scientific research.",
+                link: "https://www.ocpnutricrops.com/",
                 borderColor: "border-orange-600"
               },
               {
@@ -234,7 +274,7 @@ const Team = () => {
                 borderColor: "border-blue-600"
               }
             ].map((inst, idx) => (
-              <motion.div 
+              <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -242,17 +282,16 @@ const Team = () => {
                 className={`bg-white rounded-2xl shadow-lg border-t-4 ${inst.borderColor} p-8 text-center hover:shadow-xl transition-all duration-300 group`}
               >
                 <div className="mb-6 h-24 flex items-center justify-center">
-                  <img 
-                    src={inst.logo} 
-                    alt={inst.name} 
-                    className="max-h-20 max-w-full object-contain group-hover:scale-110 transition-transform duration-300" 
+                  <img
+                    src={inst.logo}
+                    alt={inst.name}
+                    className="max-h-20 max-w-full object-contain group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
 
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{inst.name}</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">{inst.desc}</p>
 
-                {/* FIXED <a> TAG */}
                 <a
                   href={inst.link}
                   target="_blank"
@@ -265,7 +304,6 @@ const Team = () => {
               </motion.div>
             ))}
           </div>
-
         </motion.div>
       </div>
     </div>

@@ -10,39 +10,45 @@ const Home = () => {
     {
       icon: Database,
       title: "Multi-Modal Data Integration",
-      description: "Seamlessly integrates satellite imagery (Sentinel-1/2, Landsat), soil health metrics, and crop phenology data for comprehensive agricultural insights.",
-      delay: 0.2
+      description:
+        "Combines satellite time-series (Sentinel-1/2, Landsat), vegetation indices, and auxiliary field data to build a rich, unified view of each parcel.",
+      delay: 0.2,
     },
     {
       icon: Layers,
       title: "Advanced Deep Learning",
-      description: "Leverages state-of-the-art 3D CNNs and ConvLSTMs to capture spatial, spectral, and temporal patterns for precise crop classification and growth stage prediction.",
-      delay: 0.3
-    },
-    {
-      icon: Droplets,
-      title: "Tailored Fertilizer Recommendations",
-      description: "Delivers customized, data-driven fertilizer strategies optimized for specific crop needs, phenological stages, and real-time soil conditions.",
-      delay: 0.4
+      description:
+        "Uses state-of-the-art 3D CNNs and ConvLSTMs to learn spatial, spectral, and temporal patterns for robust crop type identification.",
+      delay: 0.3,
     },
     {
       icon: MapPin,
       title: "Early-Season Identification",
-      description: "Enables timely crop type detection and growth monitoring through multi-temporal remote sensing analysis, supporting proactive agricultural decisions.",
-      delay: 0.5
+      description:
+        "Detects crop types early in the season from satellite time-series, enabling proactive decision-making and better planning.",
+      delay: 0.4,
+    },
+    {
+      icon: Droplets,
+      title: "Field-Level Monitoring",
+      description:
+        "Tracks crop dynamics over time, helping farmers and agronomists follow growth stages, spot anomalies, and prioritize interventions.",
+      delay: 0.5,
     },
     {
       icon: Sprout,
-      title: "Farmer-Centric Platform",
-      description: "Provides actionable, real-time insights through an intuitive interface designed specifically for farmers, agronomists, and agricultural decision-makers.",
-      delay: 0.6
+      title: "Farmer & Researcher Friendly",
+      description:
+        "Designed for both practitioners and scientists, offering intuitive views for farmers and detailed analytics for research teams.",
+      delay: 0.6,
     },
     {
       icon: TrendingUp,
-      title: "Sustainable Agriculture",
-      description: "Optimizes resource utilization, reduces environmental impact, and maximizes crop yields while promoting sustainable farming practices.",
-      delay: 0.7
-    }
+      title: "Toward Sustainable Agriculture",
+      description:
+        "Supports data-driven decisions that improve yield stability, reduce waste, and promote long-term sustainability.",
+      delay: 0.7,
+    },
   ];
 
   return (
@@ -51,10 +57,13 @@ const Home = () => {
       <div className="relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, #3FA34D 1px, transparent 0)`,
-            backgroundSize: '40px 40px'
-          }}></div>
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `radial-gradient(circle at 1px 1px, #16A34A 1px, transparent 0)`,
+              backgroundSize: '40px 40px',
+            }}
+          ></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24">
@@ -64,7 +73,7 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            {/* Logo/Badge */}
+            {/* Badge */}
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
@@ -72,7 +81,9 @@ const Home = () => {
               className="inline-flex items-center gap-2 bg-gradient-to-r from-green-100 to-orange-100 px-4 py-2 rounded-full mb-6 border border-green-200"
             >
               <Sprout className="h-5 w-5 text-green-600" />
-              <span className="text-sm font-semibold text-gray-700">Precision Agriculture Platform</span>
+              <span className="text-sm font-semibold text-gray-700">
+                Multi-Modal Crop Identification Platform
+              </span>
             </motion.div>
 
             {/* Main Heading */}
@@ -83,16 +94,17 @@ const Home = () => {
               </span>
             </h1>
 
-            {/* Subheading */}
-            <p className="mt-6 max-w-3xl mx-auto text-xl text-gray-600 leading-relaxed sm:text-2xl">
-              Advanced crop classification platform for tailored fertilizer recommendations 
-              through intelligent multi-modal data integration
+            {/* Research-Oriented Tagline (Option 2) */}
+            <p className="mt-6 max-w-3xl mx-auto text-xl text-gray-700 leading-relaxed sm:text-2xl">
+              Multi-modal deep learning for early-season crop identification using satellite time-series
+              and spatial–spectral analysis.
             </p>
 
-            {/* Description */}
+            {/* Accessible description */}
             <p className="mt-4 max-w-2xl mx-auto text-base text-gray-500 leading-relaxed">
-              Leveraging cutting-edge deep learning, remote sensing, and soil health analytics 
-              to empower farmers with precise, real-time agricultural insights
+              CropID turns raw satellite imagery into clear crop maps and timelines. Farmers, agronomists,
+              and researchers can see what is growing, where, and how it evolves — without needing to handle
+              the complexity of the underlying AI models.
             </p>
 
             {/* CTA Buttons */}
@@ -103,14 +115,19 @@ const Home = () => {
                 onClick={() => navigate('/test-model')}
                 className="group relative px-8 py-4 bg-gradient-to-r from-green-600 to-green-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-3"
               >
-                <span>Evaluate Models</span>
-                <svg 
-                  className="w-5 h-5 group-hover:translate-x-1 transition-transform" 
-                  fill="none" 
-                  stroke="currentColor" 
+                <span>View Model Results</span>
+                <svg
+                  className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  />
                 </svg>
               </motion.button>
 
@@ -120,7 +137,7 @@ const Home = () => {
                 onClick={() => navigate('/about')}
                 className="px-8 py-4 bg-white border-2 border-orange-500 text-orange-600 font-semibold rounded-xl hover:bg-orange-50 transition-all duration-300"
               >
-                Learn More
+                Learn More About CropID
               </motion.button>
             </div>
 
@@ -133,15 +150,15 @@ const Home = () => {
             >
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-600">Multi-Modal</div>
-                <div className="text-sm text-gray-600 mt-1">Data Integration</div>
+                <div className="text-sm text-gray-600 mt-1">Satellite & Field Data</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-500">Real-Time</div>
-                <div className="text-sm text-gray-600 mt-1">Insights & Predictions</div>
+                <div className="text-3xl font-bold text-orange-500">Time-Series</div>
+                <div className="text-sm text-gray-600 mt-1">Temporal Crop Dynamics</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-600">Sustainable</div>
-                <div className="text-sm text-gray-600 mt-1">Agriculture Focus</div>
+                <div className="text-3xl font-bold text-green-600">Early</div>
+                <div className="text-sm text-gray-600 mt-1">Season Identification</div>
               </div>
             </motion.div>
           </motion.div>
@@ -163,11 +180,16 @@ const Home = () => {
             </h2>
             <div className="mt-4 max-w-3xl mx-auto">
               <p className="text-lg text-gray-600 leading-relaxed">
-                CropID is an innovative precision agriculture platform that revolutionizes crop management 
-                through intelligent data fusion and advanced machine learning. By integrating multi-temporal 
-                satellite imagery, soil health metrics, and crop phenology data, CropID enables accurate 
-                crop classification and delivers customized fertilizer recommendations tailored to specific 
-                field conditions and growth stages.
+                CropID is an AI-powered crop identification platform that fuses satellite imagery and
+                contextual data to map crop types over time. It is designed to serve both the scientific
+                community and the agricultural sector by providing reliable, interpretable crop maps and
+                time-series analytics.
+              </p>
+              <p className="mt-4 text-base text-gray-500 leading-relaxed">
+                For researchers, CropID offers a testbed for multimodal, spatiotemporal models in precision
+                agriculture. For farmers and agronomists, it translates complex remote sensing and deep
+                learning outputs into simple answers to practical questions like “What is growing here?” and
+                “How is it evolving across the season?”.
               </p>
             </div>
           </motion.div>
@@ -185,17 +207,18 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-4">
-              Platform <span className="text-orange-500">Features</span>
+              Platform <span className="text-orange-500">Capabilities</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Comprehensive capabilities designed to transform agricultural decision-making
+              From satellite time-series to easy-to-read crop maps, CropID bridges advanced deep learning
+              with everyday agricultural needs.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {features.map((feature, index) => (
+            {features.map((feature) => (
               <motion.div
-                key={index}
+                key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -204,14 +227,14 @@ const Home = () => {
                 className="relative group"
               >
                 <div className="h-full bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-8 border border-gray-100">
-                  {/* Icon Container */}
+                  {/* Icon */}
                   <div className="flex justify-center mb-6">
                     <div className="p-4 bg-gradient-to-br from-green-100 to-orange-100 rounded-xl group-hover:scale-110 transition-transform duration-300">
                       <feature.icon className="h-10 w-10 text-green-600" />
                     </div>
                   </div>
 
-                  {/* Content */}
+                  {/* Title + Description */}
                   <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
                     {feature.title}
                   </h3>
@@ -239,40 +262,80 @@ const Home = () => {
             className="text-center"
           >
             <h2 className="text-3xl font-extrabold text-white sm:text-4xl mb-4">
-              Ready to Evaluate Our Models?
+              Explore Model Performance
             </h2>
             <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-              Test our trained deep learning models with your crop data, visualize predictions, 
-              and compare model performances in real-time
+              Visualize classification maps, inspect accuracy metrics, and compare model behavior across
+              regions, seasons, and crop types.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <div className="flex flex-col gap-2 text-left bg-white/10 backdrop-blur-sm rounded-lg p-6 text-white max-w-md">
-                <h3 className="font-semibold text-lg mb-2">What you can do:</h3>
-                <div className="space-y-2">
+                <h3 className="font-semibold text-lg mb-2">On the results page, you can:</h3>
+                <div className="space-y-2 text-sm sm:text-base">
                   <div className="flex items-start gap-3">
-                    <svg className="w-6 h-6 text-orange-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    <svg
+                      className="w-6 h-6 text-orange-300 flex-shrink-0 mt-0.5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
                     </svg>
-                    <span>Upload satellite imagery or sample crop data</span>
+                    <span>Browse interactive maps of model predictions.</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <svg className="w-6 h-6 text-orange-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    <svg
+                      className="w-6 h-6 text-orange-300 flex-shrink-0 mt-0.5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
                     </svg>
-                    <span>Run inference with trained models</span>
+                    <span>Inspect detailed accuracy metrics and confusion matrices.</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <svg className="w-6 h-6 text-orange-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    <svg
+                      className="w-6 h-6 text-orange-300 flex-shrink-0 mt-0.5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
                     </svg>
-                    <span>Visualize crop classification results</span>
+                    <span>Explore visual galleries of correct and challenging cases.</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <svg className="w-6 h-6 text-orange-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    <svg
+                      className="w-6 h-6 text-orange-300 flex-shrink-0 mt-0.5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
                     </svg>
-                    <span>Compare performance across different models</span>
+                    <span>Compare different models and scenarios side-by-side.</span>
                   </div>
                 </div>
               </div>
@@ -283,9 +346,19 @@ const Home = () => {
                 onClick={() => navigate('/test-model')}
                 className="px-10 py-5 bg-white text-green-700 font-bold text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-3"
               >
-                <span>Start Evaluation</span>
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                <span>Go to Model Results</span>
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  />
                 </svg>
               </motion.button>
             </div>
@@ -321,7 +394,7 @@ const Home = () => {
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-green-600 rounded-full"></span>
-                    Temporal-Spatial Feature Fusion
+                    Temporal–Spatial Feature Fusion Architectures
                   </li>
                 </ul>
               </div>
@@ -331,7 +404,7 @@ const Home = () => {
                 <ul className="text-left space-y-2 text-gray-600">
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-                    Sentinel-1 & Sentinel-2 Imagery
+                    Sentinel-1 & Sentinel-2 Satellite Imagery
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
@@ -339,7 +412,7 @@ const Home = () => {
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-                    Soil Health & Phenology Metrics
+                    Derived Vegetation Indices & Field Context Data
                   </li>
                 </ul>
               </div>
