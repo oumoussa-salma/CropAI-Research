@@ -209,7 +209,7 @@ const Team = () => {
   <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
     {[
       { name: "Hicham Moad Safhi", role: "AI Engineer" },
-      { name: "Khalid Mezraoui", role: "Digital Solution Manager" },
+      { name: "Khalid Mezouari", role: "Digital Solution Manager" },
       { name: "Mohammed Doukali", role: "Software Developer" }
     ].map((person, index) => (
       <motion.div
@@ -261,7 +261,7 @@ const Team = () => {
               },
               {
                 name: "OCP Nutricrops",
-                logo: "/icons/nutricrops.jpg",
+                logo: "public/icons/nutricrops.jpg",
                 desc: "OCP Nutricrops develops tailored crop nutrition programs powered by precision agriculture and scientific research.",
                 link: "https://www.ocpnutricrops.com/",
                 borderColor: "border-orange-600"
