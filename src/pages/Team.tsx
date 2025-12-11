@@ -258,14 +258,16 @@ const Team = () => {
                 desc: "A Moroccan university driving innovation through applied research in AI, agriculture, and sustainability.",
                 link: "https://cc.um6p.ma/mission",
                 borderColor: "border-green-600"
-              },
-              {
-                name: "OCP Nutricrops",
-                logo: "public/icons/nutricrops.jpg",
-                desc: "OCP Nutricrops develops tailored crop nutrition programs powered by precision agriculture and scientific research.",
-                link: "https://www.ocpnutricrops.com/",
-                borderColor: "border-orange-600"
-              },
+                          },
+                          {
+              name: "OCP Nutricrops",
+              logo: "/icons/nutricrops.jpg",
+              desc: "OCP Nutricrops develops tailored crop nutrition programs powered by precision agriculture and scientific research.",
+              link: "https://www.ocpnutricrops.com/",
+              borderColor: "border-orange-600",
+              logoSize: "w-40 h-40"
+            }
+            ,
               {
                 name: "SDAS Group",
                 logo: "https://www.sdas-group.com/static/libs/img/logo_2.png",
@@ -285,7 +287,8 @@ const Team = () => {
                   <img
                     src={inst.logo}
                     alt={inst.name}
-                    className="max-h-20 max-w-full object-contain group-hover:scale-110 transition-transform duration-300"
+                   className="max-h-48 max-w-full object-contain group-hover:scale-110 transition-transform duration-300"
+
                   />
                 </div>
 
