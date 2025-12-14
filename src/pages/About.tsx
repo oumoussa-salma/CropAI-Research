@@ -181,7 +181,7 @@ const About = () => {
 
   const projectStats = [
     { label: 'Project Duration', value: '2 Years', icon: Calendar },
-    { label: 'Total Budget', value: '5M MAD', icon: DollarSign },
+    { label: 'Total Budget', value: '7500 KMAD', icon: DollarSign },
     { label: 'Team Members', value: '6+', icon: Users },
     { label: 'Project Phases', value: '8 Quarters', icon: BarChart3 }
   ];
